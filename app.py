@@ -247,8 +247,17 @@ def predict_engagement(events_df):
     return model, X_test, y_test
 
 def main():
-    st.set_page_config(page_title="IdeaHub Analytics", layout="wide")
-    st.title('IdeaHub Analytics Dashboard')
+    st.set_page_config(
+        page_title="IdeaHub Analytics Dashboard",
+        page_icon="📊",
+        layout="wide"
+    )
+    
+    st.title("IdeaHub Analytics Dashboard")
+    
+    # Architecture Image
+    st.header("System Architecture")
+    st.image("assets/arch.png", use_column_width=True)
     
     # 데이터 로드
     try:
